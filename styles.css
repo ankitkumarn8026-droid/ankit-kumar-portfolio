@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family:'Poppins',sans-serif;
     line-height: 1.7;
     color: var(--text);
     background: var(--light);
@@ -100,7 +100,7 @@ nav {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: url('https://source.unsplash.com/random/1920x1080/?ecommerce,technology') center/cover;
-    opacity: 0.22;
+    opacity: 0.08;
     z-index: 1;
 }
 
@@ -173,13 +173,14 @@ nav {
 
 /* Other Sections */
 section { padding: 110px 8%; }
-h2 { text-align: center; font-size: 2.8rem; margin-bottom: 3.5rem; color: var(--text); }
+h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--text); }
 
 .about { background: white; }
-.experience { background: #f1f5f9; }
-.skills { background: #f8fafc; }
-.projects { background: white; }
+.experience { background: #eef4ff; }
+.skills { background: #ffffff; }
+.projects { background: #eef4ff; }
 .contact { background: #f1f5f9; text-align: center; }
+
 
 .timeline-item {
     background: white;
@@ -218,6 +219,14 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 3.5rem; color: var(--
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.timeline-item,
+.skill-card,
+.project-card {
+    background: #ffffff;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
 }
 
 footer {
