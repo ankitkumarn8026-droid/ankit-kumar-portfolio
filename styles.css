@@ -181,6 +181,35 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
 .projects { background: #eef4ff; }
 .contact { background: #f1f5f9; text-align: center; }
 
+.contact-card {
+    max-width: 550px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    justify-content: center;
+    font-size: 1.05rem;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
 
 .timeline-item {
     background: white;
