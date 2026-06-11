@@ -192,7 +192,7 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
 .about { background: white; }
 .experience { background: #eef4ff; }
 .skills { background: #ffffff; }
-.projects { background: white; }
+.projects { background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); }
 .contact { background: #eef4ff; text-align: center;
              border-top: 5px solid #2563eb;
          }
