@@ -44,3 +44,32 @@ function typewriter() {
 }
 
 typewriter();
+
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Click pe active set karo
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    navLinks.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// Scroll pe bhi active update karo
+const sections = document.querySelectorAll('section[id]');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { 
+  threshold: 0.3,
+  rootMargin: '-80px 0px -50% 0px' /* navbar height account karo */
+});
+
+sections.forEach(section => observer.observe(section));
