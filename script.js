@@ -71,3 +71,19 @@ const navObserver = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => navObserver.observe(section));
+
+
+// Hamburger toggle
+const hamburger = document.getElementById('hamburger');
+const navLinksMenu = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinksMenu.classList.toggle('open');
+});
+
+// Link click pe menu band ho jaye
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinksMenu.classList.remove('open');
+  });
+});
