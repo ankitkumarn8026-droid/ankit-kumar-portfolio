@@ -146,6 +146,16 @@ nav {
     margin-top:10px;
 }
 
+.hero-para {
+  opacity: 0;
+  animation: fadeIn 1s ease 1.5s forwards;
+  /* 1.5s delay — subtitle type hone ke baad aaye */
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
 .hero-buttons {
     display: flex;
     justify-content: center;
