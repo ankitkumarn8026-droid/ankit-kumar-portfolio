@@ -220,6 +220,45 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
              border-top: 5px solid #2563eb;
          }
 
+.journey-wrapper {
+  padding: 4rem 2rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.journey-inner {
+  border-left: 4px solid #3545c7;
+  padding-left: 1.75rem;
+}
+
+.journey-tag {
+  display: inline-block;
+  font-size: 12px;
+  background: #EEEDFE;
+  color: #3C3489;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  letter-spacing: 0.05em;
+}
+
+.journey-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 16px;
+}
+
+.journey-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.9;
+  margin: 0;
+  max-width: 720px;
+}
+
+
+
 .contact-card {
     max-width: 550px;
     margin: 0 auto;
