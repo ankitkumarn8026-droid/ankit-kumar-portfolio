@@ -16,9 +16,8 @@ Skilled in product listing, catalog optimization, inventory management, order pr
 
 ## 🌐 Live Portfolio
 
-**Visit here:** [https://yourusername.github.io/ankit-kumar-portfolio/](https://yourusername.github.io/ankit-kumar-portfolio/)
+**Visit here:** [https://yourusername.github.io/ankit-kumar-portfolio/](https://ankitkumarn8026-droid.github.io/ankit-kumar-portfolio/)
 
-*(Link update kar dena jab GitHub Pages live ho jayega)*
 
 ---
 
@@ -63,7 +62,7 @@ Skilled in product listing, catalog optimization, inventory management, order pr
 
 ## Connect With Me
 
-- [LinkedIn](https://linkedin.com/in/your-profile) *(update kar dena)*
+- [LinkedIn](https://linkedin.com/in/your-profile)
 - [GitHub](https://github.com/yourusername)
 
 ---
