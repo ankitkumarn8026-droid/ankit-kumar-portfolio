@@ -164,6 +164,17 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .subtitle {
+    min-height: 3em;        /* 2 lines ke liye safe space */
+    font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;        /* text wrap ho sake */
+  }
+}
+
 
 /* Hero */
 .hero {
