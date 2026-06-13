@@ -15,7 +15,13 @@ document.querySelectorAll('.reveal-card').forEach(el => {
 });
 
 // === Typewriter ===
-const strings = [
+const isMobile = window.innerWidth <= 768;
+const strings = isMobile ? [
+  "E-commerce Operations",
+  "Marketplace Expert",
+  "Catalog & Inventory",
+  "SEO | Amazon | Flipkart"
+] : [
   "E-commerce Operations & Data Management",
   "Marketplace Operations Expert",
   "Catalog & Inventory Specialist",
