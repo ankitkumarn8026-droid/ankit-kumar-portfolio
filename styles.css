@@ -28,6 +28,7 @@ body {
   right: 0;
   z-index: 1000;
   padding: 0 24px;
+  padding: 0 120px;  
   pointer-events: none; /* clicks pass through header background */
 }
 
@@ -38,7 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 780px;
+  max-width: 100%;
   margin: 0 auto;
   box-shadow: 0 4px 24px rgba(53, 69, 199, 0.15);
   pointer-events: all; /* clicks work on nav itself */
