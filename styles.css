@@ -641,20 +641,6 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
   margin: 3rem auto 0;
 }
 
-.timeline-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 0.4rem;
-}
-
-.timeline-underline {
-  width: 40px;
-  height: 3px;
-  background: #2563eb;
-  border-radius: 2px;
-  margin-bottom: 2rem;
-}
 
 .jt-track { position: relative; }
 
@@ -747,6 +733,249 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
   .jt-dot  { display: none; }
 }
 
+/* Experience section */
+.experience {
+  background: #f0f4ff;
+  padding: 80px 8%;
+}
+
+.experience h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.exp-underline {
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+  margin: 0 auto 0.5rem;
+}
+
+.exp-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 3rem;
+}
+
+.exp-wrapper {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Left timeline */
+.exp-timeline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-top: 1rem;
+}
+
+.exp-tl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.exp-tl-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  z-index: 1;
+}
+
+.exp-tl-line {
+  width: 2px;
+  height: 280px;
+  background: linear-gradient(to bottom, #2563eb, #16a34a);
+  margin: 0.5rem 0;
+}
+
+.exp-tl-date {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  line-height: 1.5;
+}
+
+.exp-tl-item:last-child .exp-tl-date {
+  color: #16a34a;
+}
+
+.exp-tl-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-top: 4px;
+}
+
+/* Right cards */
+.exp-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exp-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e8eeff;
+}
+
+.exp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.exp-company-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.exp-card-title {
+  flex: 1;
+}
+
+.exp-card-title h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.2rem;
+}
+
+.exp-card-title p {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.exp-company {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.exp-date-badge {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.exp-summary {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.exp-divider {
+  border: none;
+  border-top: 1px solid #e8eeff;
+  margin-bottom: 1rem;
+}
+
+.exp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.exp-col h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exp-col ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.exp-col ul li {
+  font-size: 13px;
+  color: #475569;
+  padding-left: 1.2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp-col ul li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-size: 8px;
+  top: 5px;
+}
+
+.exp-col ul.achievements li::before {
+  content: '✓';
+  color: #16a34a;
+  font-size: 11px;
+  top: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .exp-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-timeline-left {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .exp-tl-line { display: none; }
+
+  .exp-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-date-badge {
+    margin-left: 0;
+  }
+}
 
 .contact-card {
     max-width: 550px;
