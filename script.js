@@ -94,18 +94,47 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
+emailjs.init("YHdIgG-w4hVN2UlB3");
 
 function sendEmail() {
+
   const name = document.querySelector('.cf-input[placeholder="Your Name"]').value;
   const email = document.querySelector('.cf-input[placeholder="Your Email"]').value;
   const subject = document.querySelector('.cf-input[placeholder="Subject"]').value;
   const message = document.querySelector('.cf-textarea').value;
 
   if (!name || !email || !message) {
-    alert('Please fill all fields!');
+    alert("Please fill all required fields!");
     return;
   }
 
-  const mailtoLink = `mailto:ankitkumarn8026@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
-  window.location.href = mailtoLink;
+  const params = {
+    from_name: name,
+    from_email: email,
+    subject: subject,
+    message: message
+  };
+
+  emailjs.send(
+    "service_98bfbuh",
+    "template_389hubg",
+    params
+  )
+  .then(function () {
+
+    alert("Message sent successfully!");
+
+    document.querySelector('.cf-input[placeholder="Your Name"]').value = "";
+    document.querySelector('.cf-input[placeholder="Your Email"]').value = "";
+    document.querySelector('.cf-input[placeholder="Subject"]').value = "";
+    document.querySelector('.cf-textarea').value = "";
+
+  })
+  .catch(function (error) {
+
+    console.error(error);
+
+    alert("Failed to send message. Please try again.");
+
+  });
 }
