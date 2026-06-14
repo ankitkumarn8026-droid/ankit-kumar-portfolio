@@ -499,9 +499,7 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
 .about { background: white; }
 .experience { background: #eef4ff; }
 .skills { background: #ffffff; }
-.contact { background: #eef4ff; text-align: center;
-             border-top: 5px solid #2563eb;
-         }
+
 
 /* About section */
 .about {
@@ -976,40 +974,6 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
   }
 }
 
-.contact-card {
-    max-width: 550px;
-    margin: 0 auto;
-    background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    max-width: 100%;
-    transition:.3s ease;
-}
-
-.contact-card:hover{
-    transform:translateY(-4px);
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 0;
-    justify-content: center;
-    font-size: 1.05rem;
-}
-
-.contact-item a {
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: 500;
-}
-
-
-.contact-item a:hover {
-    text-decoration: underline;
-}
 
 
 .timeline-item {
@@ -1542,6 +1506,329 @@ footer {
   }
 
   .proj-values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* Contact Section */
+.contact {
+  background: #f8faff;
+  padding: 80px 8%;
+  text-align: left;
+  border-top: none;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.contact-underline {
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+  margin: 0 auto 1rem;
+}
+
+.contact-subtitle {
+  color: #64748b;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Split layout */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+/* Left info card */
+.contact-info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e8eeff;
+}
+
+.contact-info-card h3,
+.contact-form-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+.ci-underline {
+  width: 36px;
+  height: 2px;
+  background: #2563eb;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.ci-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ci-item:last-of-type { border-bottom: none; }
+
+.ci-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.ci-label {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ci-value {
+  font-size: 13px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.ci-value:hover { text-decoration: underline; }
+
+.ci-quote {
+  background: #f8faff;
+  border-left: 3px solid #2563eb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ci-quote-icon {
+  color: #2563eb;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ci-quote p {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Right form card */
+.contact-form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e8eeff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cf-field {
+  position: relative;
+}
+
+.cf-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.cf-input {
+  width: 100%;
+  padding: 12px 14px 12px 38px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0f172a;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background: #f8faff;
+}
+
+.cf-input:focus {
+  border-color: #2563eb;
+  background: white;
+}
+
+.cf-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.cf-submit {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cf-submit:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+.cf-note {
+  text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Social row */
+.contact-social {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e8eeff;
+}
+
+.cs-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.cs-underline {
+  width: 40px;
+  height: 2px;
+  background: #2563eb;
+  border-radius: 2px;
+  margin: 0 auto 1.5rem;
+}
+
+.cs-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.cs-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem;
+  border: 1px solid #e8eeff;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cs-item:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.1);
+}
+
+.cs-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.cs-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.cs-desc {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.cs-arrow {
+  margin-left: auto;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cf-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-row {
     grid-template-columns: repeat(2, 1fr);
   }
 }
