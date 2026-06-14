@@ -388,9 +388,10 @@ body {
   width: 100%;
   background: white;
   border-radius: 16px;
-  padding: 1.2rem 2rem;
+  padding: 1.5rem 2.5rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
+
 .logo-text {
   font-size: 1.1rem;
   font-weight: 700;
@@ -425,33 +426,37 @@ body {
 .logos-row {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: space-between; /* evenly spread karo */
+  flex-wrap: nowrap;
+  gap: 2rem;
 }
 
 .marketplace-logo {
-  height: 28px;
-  width: auto;
-  object-fit: contain;
+  height: 28px;        /* fixed height */
+  width: 100px;        /* fixed width */
+  object-fit: contain; /* aspect ratio maintain */
+  object-position: center;
   filter: grayscale(100%);
-  opacity: 0.6;
-  transition: all 0.3s ease;
+  opacity: 0.55;
+  transition: transform 0.3s ease;
 }
 
 .marketplace-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.15);
 }
+
 
 /* Mobile */
 @media (max-width: 768px) {
   .logos-row {
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
   }
 
   .marketplace-logo {
-    height: 20px;
+    height: 22px;
+    width: 80px;
   }
 }
 
