@@ -690,40 +690,158 @@
 
     <!-- Contact -->
 <section id="contact" class="contact">
+  <div class="contact-header">
+    <span class="contact-badge"><i class="fas fa-paper-plane"></i> Get In Touch</span>
     <h2>Let's Connect</h2>
-<div class="timeline">
-    <div class="contact-card reveal-card">
+    <div class="contact-underline"></div>
+    <p class="contact-subtitle">I'm always open to new opportunities, collaborations, and interesting projects. Let's connect and create something amazing together!</p>
+  </div>
 
-        <div class="contact-item ">
-           <i class="fas fa-envelope icon"></i>
-            <span>ankitkumarn8026@gmail.com</span>
+  <div class="contact-inner">
+
+    <!-- Left — Contact Info -->
+    <div class="contact-info-card reveal-card">
+      <h3>Contact Information</h3>
+      <div class="ci-underline"></div>
+
+      <div class="ci-item">
+        <div class="ci-icon" style="background:#eff6ff;">
+          <i class="fas fa-envelope" style="color:#2563eb;"></i>
         </div>
-
-        <div class="contact-item">
-            <i class="fas fa-phone icon"></i>
-            <span>+91 8955998002</span>
+        <div>
+          <p class="ci-label">Email</p>
+          <a href="mailto:ankitkumarn8026@gmail.com" class="ci-value">ankitkumarn8026@gmail.com</a>
         </div>
+      </div>
 
-        <div class="contact-item">
-            <i class="fas fa-location-dot icon"></i>
-            <span>New Delhi, India</span>
+      <div class="ci-item">
+        <div class="ci-icon" style="background:#eff6ff;">
+          <i class="fas fa-phone" style="color:#2563eb;"></i>
         </div>
+        <div>
+          <p class="ci-label">Phone</p>
+          <a href="tel:+918955998002" class="ci-value">+91 8955998002</a>
+        </div>
+      </div>
 
- <div class="contact-item">
-        <i class="fab fa-linkedin icon"></i>
-        <a href="https://linkedin.com/in/YOUR-LINK">LinkedIn</a>
+      <div class="ci-item">
+        <div class="ci-icon" style="background:#eff6ff;">
+          <i class="fas fa-location-dot" style="color:#2563eb;"></i>
+        </div>
+        <div>
+          <p class="ci-label">Location</p>
+          <span class="ci-value">New Delhi, India</span>
+        </div>
+      </div>
+
+      <div class="ci-item">
+        <div class="ci-icon" style="background:#eff6ff;">
+          <i class="fab fa-linkedin" style="color:#2563eb;"></i>
+        </div>
+        <div>
+          <p class="ci-label">LinkedIn</p>
+          <a href="https://linkedin.com/in/YOUR-LINK" target="_blank" class="ci-value">linkedin.com/in/YOUR-LINK</a>
+        </div>
+      </div>
+
+      <div class="ci-item">
+        <div class="ci-icon" style="background:#eff6ff;">
+          <i class="fab fa-github" style="color:#2563eb;"></i>
+        </div>
+        <div>
+          <p class="ci-label">GitHub</p>
+          <a href="https://github.com/ankitkumarn8026-droid" target="_blank" class="ci-value">github.com/ankitkumarn8026-droid</a>
+        </div>
+      </div>
+
+      <div class="ci-quote">
+        <i class="fas fa-quote-left ci-quote-icon"></i>
+        <p>Feel free to reach out for e-commerce operations, marketplace management, automation, or web development projects.</p>
+      </div>
     </div>
 
-    <div class="contact-item">
-        <i class="fab fa-github icon"></i>
-        <a href="https://github.com/YOUR-USERNAME">GitHub</a>
+    <!-- Right — Message Form -->
+    <div class="contact-form-card reveal-card">
+      <h3>Send Me a Message</h3>
+      <div class="ci-underline"></div>
+
+      <div class="cf-row">
+        <div class="cf-field">
+          <i class="fas fa-user cf-icon"></i>
+          <input type="text" placeholder="Your Name" class="cf-input">
+        </div>
+        <div class="cf-field">
+          <i class="fas fa-envelope cf-icon"></i>
+          <input type="email" placeholder="Your Email" class="cf-input">
+        </div>
+      </div>
+
+      <div class="cf-field">
+        <i class="fas fa-file-alt cf-icon"></i>
+        <input type="text" placeholder="Subject" class="cf-input">
+      </div>
+
+      <div class="cf-field">
+        <i class="fas fa-comment cf-icon" style="top:16px;"></i>
+        <textarea placeholder="Your Message" class="cf-input cf-textarea" rows="6"></textarea>
+      </div>
+
+      <button class="cf-submit" onclick="sendEmail()">
+        <i class="fas fa-paper-plane"></i> Send Message
+      </button>
+      <p class="cf-note">I'll get back to you as soon as possible!</p>
     </div>
-<p class="contact-note">
-    Feel free to connect for e-commerce operations,
-    marketplace management, or web development projects.
-</p>
+
+  </div>
+
+  <!-- Social Links Row -->
+  <div class="contact-social reveal-card">
+    <h3 class="cs-title">Let's Connect on</h3>
+    <div class="cs-underline"></div>
+    <div class="cs-row">
+      <a href="https://linkedin.com/in/YOUR-LINK" target="_blank" class="cs-item">
+        <div class="cs-icon" style="background:#eff6ff;">
+          <i class="fab fa-linkedin" style="color:#2563eb;"></i>
+        </div>
+        <div>
+          <p class="cs-name">LinkedIn</p>
+          <p class="cs-desc">Connect with me</p>
+        </div>
+        <i class="fas fa-arrow-right cs-arrow"></i>
+      </a>
+      <a href="https://github.com/ankitkumarn8026-droid" target="_blank" class="cs-item">
+        <div class="cs-icon" style="background:#f8fafc;">
+          <i class="fab fa-github" style="color:#0f172a;"></i>
+        </div>
+        <div>
+          <p class="cs-name">GitHub</p>
+          <p class="cs-desc">Check out my projects</p>
+        </div>
+        <i class="fas fa-arrow-right cs-arrow"></i>
+      </a>
+      <a href="mailto:ankitkumarn8026@gmail.com" class="cs-item">
+        <div class="cs-icon" style="background:#eff6ff;">
+          <i class="fas fa-envelope" style="color:#2563eb;"></i>
+        </div>
+        <div>
+          <p class="cs-name">Email</p>
+          <p class="cs-desc">Drop me a message</p>
+        </div>
+        <i class="fas fa-arrow-right cs-arrow"></i>
+      </a>
+      <a href="tel:+918955998002" class="cs-item">
+        <div class="cs-icon" style="background:#eff6ff;">
+          <i class="fas fa-phone" style="color:#2563eb;"></i>
+        </div>
+        <div>
+          <p class="cs-name">Call</p>
+          <p class="cs-desc">Let's have a conversation</p>
+        </div>
+        <i class="fas fa-arrow-right cs-arrow"></i>
+      </a>
     </div>
-</div>
+  </div>
+
 </section>
 
     <footer>
