@@ -416,7 +416,7 @@ body {
   object-fit: contain;
   object-position: center;
   filter: none;
-  opacity: 0.5;
+  opacity: 1;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
