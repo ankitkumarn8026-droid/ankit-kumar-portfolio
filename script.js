@@ -94,7 +94,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-emailjs.init("YHdIgG-w4hVN2UlB3");
+emailjs.init("YHdlgG-w4hVN2UlB3");
 
 function sendEmail() {
 
@@ -130,13 +130,12 @@ function sendEmail() {
     document.querySelector('.cf-textarea').value = "";
 
   })
-  .catch(function (error) {
+.catch(function (error) {
 
-  console.log("FULL ERROR:", error);
+    console.error(error);
 
-  alert(
-    "Status: " + error.status +
-    "\nText: " + error.text
-  );
+    alert("Failed to send message. Please try again.");
 
-});
+  });
+
+}
