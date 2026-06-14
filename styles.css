@@ -432,6 +432,11 @@ body {
 .marketplace-logo[alt="Shopify"]  { height: 36px; }
 .marketplace-logo[alt="Wayfair"]  { height: 28px; }
 
+.marketplace-logo[alt="Walmart"] { 
+  height: 28px;   /* ab normal height kaam karegi */
+  width: auto; 
+}
+
 @media (max-width: 768px) {
   .hero-logos {
     padding: 1rem 1.5rem;
