@@ -93,3 +93,19 @@ document.querySelectorAll('.nav-link').forEach(link => {
     navLinksMenu.classList.remove('open');
   });
 });
+
+
+function sendEmail() {
+  const name = document.querySelector('.cf-input[placeholder="Your Name"]').value;
+  const email = document.querySelector('.cf-input[placeholder="Your Email"]').value;
+  const subject = document.querySelector('.cf-input[placeholder="Subject"]').value;
+  const message = document.querySelector('.cf-textarea').value;
+
+  if (!name || !email || !message) {
+    alert('Please fill all fields!');
+    return;
+  }
+
+  const mailtoLink = `mailto:ankitkumarn8026@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+  window.location.href = mailtoLink;
+}
