@@ -132,9 +132,11 @@ function sendEmail() {
   })
   .catch(function (error) {
 
-    console.error(error);
+  console.log("FULL ERROR:", error);
 
-    alert("Failed to send message. Please try again.");
+  alert(
+    "Status: " + error.status +
+    "\nText: " + error.text
+  );
 
-  });
-}
+});
