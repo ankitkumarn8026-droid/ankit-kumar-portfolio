@@ -393,28 +393,6 @@ body {
   animation: fadeUp 0.8s ease 0.6s both;
 }
 
-.logo-text {
-  font-size: 1.1rem;
-  font-weight: 700;
-  opacity: 0.5;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  cursor: default;
-  letter-spacing: -0.5px;
-}
-
-.logo-text:hover {
-  transform: scale(1.15);
-  opacity: 0.9;
-}
-
-.amazon  { color: #FF9900; font-family: 'Arial Black', sans-serif; }
-.walmart { color: #0071CE; }
-.flipkart{ color: #2874F0; font-style: italic; }
-.meesho  { color: #F43397; font-style: italic; }
-.shopify { color: #96BF48; }
-.wayfair { color: #7B2D8B; font-style: italic; }
-
-
 .logos-label {
   font-size: 11px;
   color: #94a3b8;
@@ -443,9 +421,9 @@ body {
 }
 
 .marketplace-logo:hover {
-  transform: scale(1.12);
-  opacity: 1;
+  transform: scale(1.12);  /* sirf zoom in */
 }
+
 
 .marketplace-logo[alt="Amazon"]   { height: 28px; }
 .marketplace-logo[alt="Walmart"]  { height: 32px; }
