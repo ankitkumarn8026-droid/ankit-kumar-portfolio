@@ -433,20 +433,26 @@ body {
 }
 
 .marketplace-logo {
-  height: 26px;
-  width: 90px;
+  height: 36px;
+  width: 110px;
   object-fit: contain;
   object-position: center;
-  filter: grayscale(100%);
+  filter: none;
   opacity: 0.5;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .marketplace-logo:hover {
   transform: scale(1.12);
-  opacity: 0.85;
+  opacity: 1;
 }
 
+.marketplace-logo[alt="Amazon"]   { height: 28px; }
+.marketplace-logo[alt="Walmart"]  { height: 32px; }
+.marketplace-logo[alt="Flipkart"] { height: 36px; }
+.marketplace-logo[alt="Meesho"]   { height: 30px; }
+.marketplace-logo[alt="Shopify"]  { height: 36px; }
+.marketplace-logo[alt="Wayfair"]  { height: 28px; }
 
 @media (max-width: 768px) {
   .hero-logos {
