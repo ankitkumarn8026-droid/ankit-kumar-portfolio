@@ -1,4 +1,4 @@
-Plain text
+
 User-agent: *
 Allow: /
 
