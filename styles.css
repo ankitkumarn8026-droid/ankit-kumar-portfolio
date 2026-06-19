@@ -1,6 +1,4 @@
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1e40af;
     --text: #1e2937;
     --light: #f8fafc;
     --dark: #1e2937;
@@ -987,15 +985,6 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
 }
 
 
-
-.timeline-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-}
-
 /* Skills Section */
 .skills {
   background: #f8faff;
@@ -1193,10 +1182,7 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
   height: 28px;
   object-fit: contain;
 }
-.gaming-logo{
-    width:auto;
-    height:40px;
-}
+
 /* Mobile */
 @media (max-width: 768px) {
   .skills-categories {
@@ -1214,16 +1200,6 @@ h2 { text-align: center; font-size: 2.8rem; margin-bottom: 1.5rem; color: var(--
   }
 }
 
-
-
-
-.timeline-item,
-.skill-card,
-.project-card {
-    background: #ffffff;
-    border-left: 5px solid #2563eb;
-    box-shadow: 0 12px 30px rgba(0,0,0,.08);
-}
 
 footer {
     background: var(--dark);
