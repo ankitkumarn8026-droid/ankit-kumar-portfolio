@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ankitkumarn8026-droid.github.io/ankit-kumar-portfolio/sitemap.xml
+Sitemap: https://ankit-kumar.in/sitemap.xml
