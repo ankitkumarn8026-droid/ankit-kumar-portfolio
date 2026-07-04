@@ -97,7 +97,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
 emailjs.init("YHdlgG-w4hVN2UlB3");
 
 function sendEmail() {
-
   const name = document.querySelector('.cf-input[placeholder="Your Name"]').value;
   const email = document.querySelector('.cf-input[placeholder="Your Email"]').value;
   const subject = document.querySelector('.cf-input[placeholder="Subject"]').value;
@@ -121,21 +120,27 @@ function sendEmail() {
     params
   )
   .then(function () {
-
-    alert("Message sent successfully!");
-
     document.querySelector('.cf-input[placeholder="Your Name"]').value = "";
     document.querySelector('.cf-input[placeholder="Your Email"]').value = "";
     document.querySelector('.cf-input[placeholder="Subject"]').value = "";
     document.querySelector('.cf-textarea').value = "";
-
+    showSuccessPopup();
   })
-.catch(function (error) {
-
+  .catch(function (error) {
     console.error(error);
-
     alert("Failed to send message. Please try again.");
-
   });
-
 }
+
+function showSuccessPopup() {
+  document.getElementById('successOverlay').classList.add('active');
+}
+
+function closeSuccessPopup() {
+  document.getElementById('successOverlay').classList.remove('active');
+}
+
+// Overlay ke bahar click karne par popup band ho jaye
+document.getElementById('successOverlay').addEventListener('click', function (e) {
+  if (e.target === this) closeSuccessPopup();
+});
