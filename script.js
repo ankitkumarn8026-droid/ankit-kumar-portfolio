@@ -9,7 +9,6 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.15 });
-
 document.querySelectorAll('.reveal-card').forEach(el => {
   revealObserver.observe(el);
 });
@@ -27,10 +26,8 @@ const strings = isMobile ? [
   "Catalog & Inventory Specialist",
   "SEO Optimization | Amazon | Flipkart"
 ];
-
 const twEl = document.getElementById('tw-text');
 let si = 0, ci = 0, deleting = false;
-
 function typewriter() {
   const s = strings[si];
   if (!deleting) {
@@ -53,7 +50,6 @@ typewriter();
 
 // === Navbar Active Link ===
 const navLinks = document.querySelectorAll('.nav-link');
-
 navLinks.forEach(link => {
   link.addEventListener('click', function() {
     navLinks.forEach(l => l.classList.remove('active'));
@@ -63,26 +59,27 @@ navLinks.forEach(link => {
 
 const sections = document.querySelectorAll('section[id]');
 
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(l => l.classList.remove('active'));
-      const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-      if (active) active.classList.add('active');
+function updateActiveNavOnScroll() {
+  const scrollPos = window.scrollY + 120; // navbar height offset
+  let currentSection = sections[0];
+
+  sections.forEach(section => {
+    if (section.offsetTop <= scrollPos) {
+      currentSection = section;
     }
   });
-}, { 
-  threshold: 0.3,
-  rootMargin: '-80px 0px -50% 0px'
-});
 
-sections.forEach(section => navObserver.observe(section));
+  navLinks.forEach(l => l.classList.remove('active'));
+  const active = document.querySelector(`.nav-link[href="#${currentSection.id}"]`);
+  if (active) active.classList.add('active');
+}
 
+window.addEventListener('scroll', updateActiveNavOnScroll);
+updateActiveNavOnScroll(); // page load par bhi sahi section highlight ho
 
 // Hamburger toggle
 const hamburger = document.getElementById('hamburger');
 const navLinksMenu = document.getElementById('nav-links');
-
 hamburger.addEventListener('click', () => {
   navLinksMenu.classList.toggle('open');
 });
