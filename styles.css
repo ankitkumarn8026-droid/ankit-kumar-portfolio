@@ -1876,6 +1876,7 @@ footer {
 
 .success-popup {
   background: white;
+  position: relative;  
   border-radius: 16px;
   padding: 2.5rem 2rem;
   width: 90%;
@@ -1884,6 +1885,29 @@ footer {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
   transform: scale(0.85) translateY(10px);
   transition: transform 0.3s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.success-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f1f5f9;
+  border-radius: 50%;
+  color: #64748b;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.success-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
 }
 
 .success-overlay.active .success-popup {
