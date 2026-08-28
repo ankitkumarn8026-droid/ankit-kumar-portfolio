@@ -936,6 +936,27 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="script.js" defer></script>
-   
+   <script>
+const cursor = document.querySelector('.custom-cursor');
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+const hoverElements = document.querySelectorAll(
+    'a, button, .project-card, .skill-card'
+);
+
+hoverElements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover');
+    });
+
+    element.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover');
+    });
+});
+</script>
 </body>
 </html>
