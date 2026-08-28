@@ -1970,4 +1970,67 @@ footer {
     padding: 2rem 1.5rem;
   }
 }
+/* Hide normal cursor on desktop */
+@media (min-width: 768px) {
+    body,
+    a,
+    button {
+        cursor: none;
+    }
 
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        pointer-events: none;
+        z-index: 99999;
+        transform: translate(-50%, -50%);
+        transition:
+            width 0.25s ease,
+            height 0.25s ease,
+            border 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .cursor-line {
+        position: absolute;
+        background: #2563eb;
+        border-radius: 2px;
+    }
+
+    .cursor-line.horizontal {
+        width: 18px;
+        height: 2px;
+        top: 8px;
+        left: 0;
+    }
+
+    .cursor-line.vertical {
+        width: 2px;
+        height: 18px;
+        top: 0;
+        left: 8px;
+    }
+
+    /* Hover effect */
+    .custom-cursor.hover {
+        width: 42px;
+        height: 42px;
+        border: 2px solid #2563eb;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, 0.08);
+    }
+
+    .custom-cursor.hover .cursor-line {
+        background: #2563eb;
+    }
+}
+
+/* Don't use custom cursor on mobile */
+@media (max-width: 767px) {
+    .custom-cursor {
+        display: none;
+    }
+}
