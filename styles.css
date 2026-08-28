@@ -2001,7 +2001,7 @@ footer {
     }
 
     .cursor-line.horizontal {
-        width: 12px;
+        width: 18px;
         height: 2px;
         top: 50%;
         left: 50%;
@@ -2009,7 +2009,7 @@ footer {
 
     .cursor-line.vertical {
         width: 2px;
-        height: 12px;
+        height: 18px;
         top: 50%;
         left: 50%;
     }
